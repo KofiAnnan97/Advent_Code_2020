@@ -1,5 +1,6 @@
 import os, re
 
+#run in the directory of the file
 parent_dir = os.getcwd()
 data = os.path.join(parent_dir, "./data.txt")
 

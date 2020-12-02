@@ -1,7 +1,8 @@
 import os
 
+#run in the directory of the file
 parent_dir = os.getcwd()
-data = os.path.join(parent_dir, "./data.txt")
+file = os.path.join(parent_dir, "./data.txt")
 
 target_num = 2020
 
@@ -19,7 +20,7 @@ def parse_data(file):
 
 def main(argv=None):
 	answers = dict()
-	int_dict = parse_data(data)
+	int_dict = parse_data(file)
 	for num, expected_num in int_dict.items():
 		try:
 			if expected_num in int_dict.keys() and num == int_dict[expected_num]:
