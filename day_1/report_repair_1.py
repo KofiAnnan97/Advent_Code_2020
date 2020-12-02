@@ -1,3 +1,7 @@
+import os
+
+parent_dir = os.getcwd()
+data = os.path.join(parent_dir, "./data.txt")
 
 target_num = 2020
 
@@ -14,9 +18,8 @@ def parse_data(file):
 		print("File could not be found.")
 
 def main(argv=None):
-	file = "/Users/c284181/Documents/Scripts/advent_code_2020/day_1/data.txt" 
 	answers = dict()
-	int_dict = parse_data(file)
+	int_dict = parse_data(data)
 	for num, expected_num in int_dict.items():
 		try:
 			if expected_num in int_dict.keys() and num == int_dict[expected_num]:
