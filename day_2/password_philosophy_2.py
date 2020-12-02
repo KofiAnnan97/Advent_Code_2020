@@ -1,7 +1,7 @@
 import os, re
 
 parent_dir = os.getcwd()
-data = os.path.join(parent_dir, "day_2/data.txt")
+data = os.path.join(parent_dir, "./data.txt")
 
 
 def check_policy(policy):
