@@ -1,5 +1,9 @@
-
 from pprint import pprint
+import os
+
+parent_dir = os.getcwd()
+data = os.path.join(parent_dir, "./data.txt")
+
 target_num = 2020
 
 def parse_clean(file):
@@ -34,7 +38,7 @@ def parse_pairs(lst):
 def main(argv=None):
     file = "/Users/c284181/Documents/Scripts/advent_code_2020/day_1/data.txt" 
     answers = dict()
-    all_vals = parse_clean(file)
+    all_vals = parse_clean(data)
     int_lst = parse_vals_half_of_target_num(all_vals)
     int_dict = parse_pairs(int_lst)
 
