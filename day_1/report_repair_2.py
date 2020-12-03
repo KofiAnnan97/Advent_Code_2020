@@ -42,7 +42,7 @@ def main(argv=None):
     int_lst = parse_vals_half_of_target_num(all_vals)
     int_dict = parse_pairs(int_lst)
 
-    for num, num_lst in int_dict.items():
+    for num_lst in int_dict.values():
         try:
             expected_num = num_lst[0]
             if expected_num in all_vals.keys():
