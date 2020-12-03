@@ -1,13 +1,14 @@
 import os, re
 
+#run in the directory of the file
 parent_dir = os.getcwd()
-data = os.path.join(parent_dir, "day_2/data.txt")
+data = os.path.join(parent_dir, "./data.txt")
 
 
 def check_policy(policy):
-    policy_lst = re.split('\s', policy)
-    low_range = int(re.sub('-\d+', '', policy_lst[0]))
-    high_range = int(re.sub('\d+-', '', policy_lst[0]))
+    policy_lst = re.split(r'\s', policy)
+    low_range = int(re.sub(r'-\d+', '', policy_lst[0]))
+    high_range = int(re.sub(r'\d+-', '', policy_lst[0]))
     check_char = policy_lst[1][:-1]
     password = policy_lst[2]
     if check_char not in password:
