@@ -9,12 +9,9 @@ namespace binary_boarding_1{
             int low = 0;
             int high = limit-1;
             for(int i = 0; i < val.Length; i++){
-                if(i == val.Length-1){
-                    if(val[i] == lower)
-                        return low;
-                    else if(val[i] == upper)
-                        return high;
-                }else{
+                if(i == val.Length-1)
+                    return (val[i] == lower) ? low : high;
+                else{
                     if(val[i] == lower)
                         high -= (high-low+1)/2;
                     else if(val[i] == upper)
@@ -39,7 +36,6 @@ namespace binary_boarding_1{
             }
             return currentHighestSeatID;
         }
-
         static void Main(String[] args){
             string path = Path.GetFullPath("data.txt");
             string[] lines = System.IO.File.ReadAllLines(@path);
