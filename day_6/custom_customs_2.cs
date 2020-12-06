@@ -42,7 +42,6 @@ namespace custom_customs_1{
             string[] lines = System.IO.File.ReadAllLines(@path);
             int sumOfCounts = getCountTotal(lines);
             Console.WriteLine("Sum of counts: {0}", sumOfCounts);
-            //Answer is 3398
         }
     }
 }
