@@ -1,6 +1,8 @@
 #general unneeded files/folders
 /.vscode
 *.exe
+#**/data.txt
+#**/test.txt
 
 #Unneed haskell file types
 *.hi
