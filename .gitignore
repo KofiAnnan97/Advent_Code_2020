@@ -2,7 +2,7 @@
 /.vscode
 *.exe
 **/data.txt
-**/text.txt
+**/test.txt
 
 #Unneed haskell file types
 *.hi
