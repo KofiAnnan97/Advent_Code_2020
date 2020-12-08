@@ -25,9 +25,6 @@ namespace handy_haversacks_2{
             int multi = 0;
             int value = 0;
             int canHold = 0;
-            foreach (var item in children)
-                Console.Write("<{0}>",item);
-            Console.WriteLine();
             string[] totalBags = index.Split(' ', 2);
             foreach(string child in children){
                 Console.WriteLine("Child:{0}", child);
@@ -43,8 +40,6 @@ namespace handy_haversacks_2{
                 sum += (multi * value);
             }
             sum += canHold;
-            Console.WriteLine("Value: {0}", totalBags[0]);
-            Console.WriteLine("{0}:{1}", totalBags[1], sum);
             colors.AddOrUpdate(totalBags[0], value.ToString(), (k,v) => value.ToString());
             return sum.ToString();
         }
@@ -52,9 +47,6 @@ namespace handy_haversacks_2{
             List<string> nodes = new List<string>();
             string top = colors[targetColor];
             nodes = new List<string>(Regex.Split(top, @",\s"));
-            foreach (var item in nodes)
-                Console.Write("|{0}|",item);
-            Console.WriteLine();
             string value = getNumberOfBagsHelper(colors, nodes, top);
             return int.Parse(value);
         }
