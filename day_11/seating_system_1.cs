@@ -31,8 +31,6 @@ namespace seating_system_1{
                             newLine.Append('#');
                         else if(lines[i][j] == '#' && occupied >= 4)
                             newLine.Append('L');
-                        else if(lines[i][j] == '.')
-                            newLine.Append(lines[i][j]);
                         else
                             newLine.Append(lines[i][j]);
                     }
@@ -50,7 +48,7 @@ namespace seating_system_1{
             return Regex.Matches(final.ToString(),"#").Count;
         }
         static void Main(String[] args){
-            string path = Path.GetFullPath("test.txt");
+            string path = Path.GetFullPath("data.txt");
             string[] lines = System.IO.File.ReadAllLines(@path);
             int occupiedSeats = getOccupiedSeats(lines);
             Console.WriteLine("Number of Occupied Seats: {0}", occupiedSeats);
