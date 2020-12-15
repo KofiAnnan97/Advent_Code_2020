@@ -1,14 +1,11 @@
 using System.IO;
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Text;
 
 namespace docking_data_1{
     class docking_data_1{
         static Dictionary<string, long> storedVals = new Dictionary<string, long>();
-        
         static char[] ToBinary(long value){
             string binary = Convert.ToString(value, 2);
             binary = binary.PadLeft(36, '0');
