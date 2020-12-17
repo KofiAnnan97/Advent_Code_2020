@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace ticket_translation_1{
     class ticket_translation_1{
-        static bool isTicketFieldValid(string ticketVal, List<string[]> daRules){
+        static bool isTicketFieldInvalid(string ticketVal, List<string[]> daRules){
             foreach(string[] rule in daRules){
                 int field = int.Parse(ticketVal);
                 if(field >= int.Parse(rule[0]) && field <= int.Parse(rule[1]))
@@ -32,7 +32,7 @@ namespace ticket_translation_1{
             int sum = 0;
             foreach (string[] ticket in tickets)
                 for(int j = 0; j < ticket.Length; j++)
-                    if(!isTicketFieldValid(ticket[j], daRules))
+                    if(!isTicketFieldInvalid(ticket[j], daRules))
                         sum += int.Parse(ticket[j]);
             return sum;
         }
