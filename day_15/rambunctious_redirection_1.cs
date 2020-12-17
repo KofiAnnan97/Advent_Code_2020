@@ -11,7 +11,6 @@ namespace rambunctious_redirection_1{
                     return k;
             return -1;
         }
-        
         static int GetNthTerm(string[] lines, int nTerm){
             string[] starter = Regex.Split(lines[0], ",");
             List<int> sequence = new List<int>();
