@@ -10,10 +10,7 @@ namespace crab_combat_1{
             while(p1.Count != 0 && p2.Count != 0){
                 int a = p1.Dequeue();
                 int b = p2.Dequeue();
-                if(a==b){
-                    p1.Enqueue(a);
-                    p2.Enqueue(b);
-                }else if(a>b){
+                if(a>b){
                     p1.Enqueue(a);
                     p1.Enqueue(b);
                 }else if(a<b){
