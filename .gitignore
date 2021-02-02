@@ -3,6 +3,7 @@
 *.exe
 **/data.txt
 **/test.txt
+**/output.txt
 
 #Unneed haskell file types
 *.hi
